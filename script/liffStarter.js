@@ -99,15 +99,14 @@ function displayLiffData() {
 function registerButtonHandlers() {
     document.getElementById('getProfileButton').addEventListener('click', function() {
         liff.getProfile().then(function(profile) {
-            document.getElementById('userIdProfileField').textContent = profile.userId;
-            document.getElementById('displayNameField').textContent = profile.displayName;
+            document.querySelector('.displayNameField').textContent = profile.displayName;
 
             // took iamge from user line data
             const img = document.querySelector('#profileImage');
             img.src = profile.pictureUrl;
             img.alt = 'Profile Picture';
 
-            document.getElementById('statusMessageField').textContent = profile.statusMessage;
+            document.querySelector('.statusMessageField').textContent = profile.statusMessage;
             toggleProfileData();
         }).catch(function(error) {
             window.alert('Error getting profile: ' + error);
