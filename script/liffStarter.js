@@ -107,7 +107,6 @@ function registerButtonHandlers() {
             img.alt = 'Profile Picture';
 
             document.querySelector('.statusMessageField').textContent = profile.statusMessage;
-            toggleProfileData();
         }).catch(function(error) {
             window.alert('Error getting profile: ' + error);
         });
