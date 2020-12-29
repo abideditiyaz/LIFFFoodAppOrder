@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+	<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+	<title>Krabby Nasty</title>
+	<!-- USed as node managaer and a custom component -->
+	<script src="https://kit.fontawesome.com/27e59cf5d8.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+	<div id="liffAppContent" class="main-container">
+		<!-- Menu Navigation -->
+		<header>
+			<div class="top-banner">
+				<h1>Home</h1>
+			</div>
+			<nav>
+				<div class="home menu-boxes">
+					<i class="fas fa-utensils fa-lg"></i>
+					<caption>Home</caption>
+				</div>
+				<div class="history menu-boxes">
+					<i class="fas fa-cloud-meatball fa-lg"></i>
+					<caption>History</caption>
+				</div>
+				<div id="getProfileButton" class="account menu-boxes">
+					<i class="fas fa-user-circle fa-lg"></i>
+					<caption>Account</caption>
+				</div>
+			</nav>
+		</header>
+		<!-- login -->
+		<div id="not-login" class="hidden">
+			<div class="alertLogin">
+				<h3>Eeiitss login dulu kak...</h3>
+				<p>Silahkan login dengan akun line anda untuk mengakses profil</p>
+				<p>
+					<button id="liffLoginButton">Login</button>
+				</p>
+			</div>
+		</div>
+		<!-- content -->
+		<div id="container-profile">
+			<div class="data-info">
+            	<div class="wraper-profile">
+    		    	<img id="profileImage" src="">
+	    		    <div class="data-user">
+	    		        <span class="displayNameField"></span>
+	    		        <span class="statusMessageField"></span>
+	    		        <button>UserId</button>
+	    		    </div>
+            	</div>
+			</div>
+			<div id="liffData">
+		        <div class="wrapper-liff-data">
+                	<div class="wrapper OS">
+                		<i class="fas fa-mobile-alt fa-2x"></i>
+                		<div class="caption">
+                			<h3>Os</h3>
+                			<h5 class="deviceOS"></h5>
+                		</div>
+                	</div>
+                	<div class="wrapper Language">
+                		<i class="fas fa-language fa-2x"></i>
+                		<div class="caption">
+                			<h3>Language</h3>
+                			<h5 class="browserLanguage"></h5>
+                		</div>
+                	</div>
+                	<div class="wrapper LineVersion">
+                		<i class="fab fa-line fa-2x"></i>
+                		<div class="caption">
+                			<h3>LINE Version</h3>
+                			<h5 class="lineVersion"></h5>
+                		</div>
+                	</div>
+                </div>
+		    </div>
+		</div>
+	</div>
+	<!-- LIFF ID Error -->
+	<div id="liffIdErrorMessage" class="hidden">
+            <p>You have not assigned any value for LIFF ID.</p>
+            <p>If you are running the app using Node.js, please set the LIFF ID as an environment variable in your Heroku account follwing the below steps: </p>
+            <code id="code-block">
+                <ol>
+                    <li>Go to `Dashboard` in your Heroku account.</li>
+                    <li>Click on the app you just created.</li>
+                    <li>Click on `Settings` and toggle `Reveal Config Vars`.</li>
+                    <li>Set `MY_LIFF_ID` as the key and the LIFF ID as the value.</li>
+                    <li>Your app should be up and running. Enter the URL of your app in a web browser.</li>
+                </ol>
+            </code>
+            <p>If you are using any other platform, please add your LIFF ID in the <code>index.html</code> file.</p>
+            <p>For more information about how to add your LIFF ID, see <a href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF app</a>.</p>
+        </div>
+    <!-- LIFF INIT ERROR -->
+    <div id="liffInitErrorMessage" class="hidden">
+        <p>Something went wrong with LIFF initialization.</p>
+        <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>.</p>
+    </div>
+    <!-- cdnLIFF -->
+	<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+	<script src="./script/liffStarter.js"></script>
+</body>
+</html>

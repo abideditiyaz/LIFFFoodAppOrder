@@ -1,0 +1,45 @@
+header {
+    position: sticky;
+    top: 0;
+}
+
+.top-banner{
+    background-color: #00b900;
+    padding: 1rem;
+    text-align: left;
+    color: white;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+nav{
+    padding: 1.5rem 1rem;
+    background-color: white;
+    width: 90%;
+    transform: translateX(6%);
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px #0000004d;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 80vh;
+}
+
+.menu-boxes{
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.menu-boxes:nth-child(2){
+    border-right: 2px dashed black;
+    border-left: 2px dashed black;
+}
+
+.menu-boxes i {
+    margin-bottom: 10px;
+}
