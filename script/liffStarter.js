@@ -96,14 +96,7 @@ function registerButtonHandlers() {
             document.querySelector('#not-login').classList.remove('hidden');
         }
 
-    });
-
-    // login call, only when external browser is used
-    document.getElementById('liffLoginButton').addEventListener('click', function() {
-        if (!liff.isLoggedIn()) {
-            // set `redirectUri` to redirect the user to a URL other than the front page of your LIFF app.
-            liff.login();
-            liff.getProfile().then(function(profile) {
+        liff.getProfile().then(function(profile) {
                 document.getElementById("container-profile").classList.remove('hidden');
                 document.querySelector('.displayNameField').textContent = profile.displayName;
 
@@ -116,6 +109,15 @@ function registerButtonHandlers() {
             }).catch(function(error) {
                 window.alert('Error getting profile: ' + error);
             });
+
+    });
+
+    // login call, only when external browser is used
+    document.getElementById('liffLoginButton').addEventListener('click', function() {
+        if (!liff.isLoggedIn()) {
+            // set `redirectUri` to redirect the user to a URL other than the front page of your LIFF app.
+            liff.login();
+
         }
     });
 }
