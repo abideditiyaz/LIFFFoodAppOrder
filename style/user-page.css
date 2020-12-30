@@ -4,6 +4,10 @@
     padding: 1.2rem;
 }
 
+#liffData {
+    height: 100vh;
+}
+
 .wraper-profile{
     display: flex;
     flex-direction: column;

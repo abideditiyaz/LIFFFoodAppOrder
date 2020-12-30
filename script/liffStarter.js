@@ -67,12 +67,6 @@ function initializeApp() {
     // displayIsInClientInfo();
     registerButtonHandlers();
 
-    // check if the user is logged in/out, and disable inappropriate button
-    // if (liff.isLoggedIn()) {
-    //     document.getElementById('liffLoginButton').disabled = true;
-    // } else {
-    //     document.getElementById('liffLogoutButton').disabled = true;
-    // }
 }
 
 /**
@@ -85,11 +79,7 @@ function displayLiffData() {
     }else{
         document.querySelector('.lineVersion').textContent = liff.getLineVersion();
     }
-    // Check client
-    if (liff.isLoggedIn() === false) {
-        document.querySelector('#container-profile').classList.add('hidden');
-        document.querySelector('#not-login').classList.remove('hidden')
-    }
+    
     document.querySelector('.deviceOS').textContent = liff.getOS();
 }
 
@@ -98,7 +88,16 @@ function displayLiffData() {
 */
 function registerButtonHandlers() {
     document.getElementById('getProfileButton').addEventListener('click', function() {
+        document.getElementById("homeMenu").style.display = 'none';
+
+        // Check client
+        if (liff.isLoggedIn() === false) {
+            document.querySelector('#container-profile').classList.add('hidden');
+            document.querySelector('#not-login').classList.remove('hidden')
+        }
+
         liff.getProfile().then(function(profile) {
+            document.getElementById("container-profile").classList.remove('hidden');
             document.querySelector('.displayNameField').textContent = profile.displayName;
 
             // took iamge from user line data

@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+	<link rel="icon" href="Favicon.png" type="image/x-icon">
 	<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
-	<title>Krabby Nasty</title>
+	<title>MinumSkuy</title>
 	<!-- USed as node managaer and a custom component -->
 	<script src="https://kit.fontawesome.com/27e59cf5d8.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./style/main.css">
@@ -19,11 +19,11 @@
 				<h1>Home</h1>
 			</div>
 			<nav>
-				<div class="home menu-boxes">
+				<div id="getHomeButton" class="home menu-boxes">
 					<i class="fas fa-utensils fa-lg"></i>
 					<caption>Home</caption>
 				</div>
-				<div class="history menu-boxes">
+				<div id="getHistoryButton" class="history menu-boxes">
 					<i class="fas fa-cloud-meatball fa-lg"></i>
 					<caption>History</caption>
 				</div>
@@ -43,8 +43,48 @@
 				</p>
 			</div>
 		</div>
-		<!-- content -->
-		<div id="container-profile">
+<!-- content -->
+
+		<!-- Home -->
+		<div id="homeMenu">
+			<!-- Cocktail -->
+			<div class="sorted">
+				<h3>CockTail</h3>
+				<div id="Cocktail" class="main-wrapper">
+				
+				</div>
+			</div>
+			<!-- Shot -->
+			<div class="sorted">
+				<h3>Shot</h3>
+				<div id="Shot" class="main-wrapper">
+				
+				</div>
+			</div>
+			<!-- Ordinary Drink -->
+			<div class="sorted">
+				<h3>Ordinary Drink</h3>
+				<div id="OrdinaryDrink" class="main-wrapper">
+				
+				</div>
+			</div>
+			<!-- Coffe Tea -->
+			<div class="sorted">
+				<h3>Coffe / Tea</h3>
+				<div id="CoffeTea" class="main-wrapper-khusus">
+				
+				</div>
+			</div>
+			<!-- Surprise -->
+			<div class="sorted">
+				<h3>Rarely Noticed</h3>
+				<div id="Surprise" class="main-wrapper-khusus">
+				
+				</div>
+			</div>
+		</div>
+		<!-- Profile -->
+		<div id="container-profile" class="hidden">
 			<div class="data-info">
             	<div class="wraper-profile">
     		    	<img id="profileImage" src="">
@@ -106,5 +146,16 @@
     <!-- cdnLIFF -->
 	<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 	<script src="./script/liffStarter.js"></script>
+	<script src="./script/trigger.js"></script>
+	<script>
+		//testing kalau berhasil nanti pindah
+		document.querySelector('#getHomeButton').addEventListener('click', _ => {
+			document.getElementById("homeMenu").style.display = 'block';
+			document.getElementById("container-profile").classList.add('hidden');
+			document.querySelector('#not-login').classList.add('hidden')
+
+		})
+		testingFood()
+	</script>
 </body>
 </html>
