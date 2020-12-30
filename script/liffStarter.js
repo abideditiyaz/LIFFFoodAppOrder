@@ -91,24 +91,11 @@ function registerButtonHandlers() {
         document.getElementById("homeMenu").style.display = 'none';
 
         // Check client
-        if (liff.isLoggedIn() === false) {
-            document.querySelector('#container-profile').classList.add('hidden');
-            document.querySelector('#not-login').classList.remove('hidden')
+        if (!liff.isLoggedIn()) {
+
+            document.querySelector('#not-login').classList.remove('hidden');
         }
 
-        liff.getProfile().then(function(profile) {
-            document.getElementById("container-profile").classList.remove('hidden');
-            document.querySelector('.displayNameField').textContent = profile.displayName;
-
-            // took iamge from user line data
-            const img = document.querySelector('#profileImage');
-            img.src = profile.pictureUrl;
-            img.alt = 'Profile Picture';
-
-            document.querySelector('.statusMessageField').textContent = profile.statusMessage;
-        }).catch(function(error) {
-            window.alert('Error getting profile: ' + error);
-        });
     });
 
     // login call, only when external browser is used
@@ -116,6 +103,19 @@ function registerButtonHandlers() {
         if (!liff.isLoggedIn()) {
             // set `redirectUri` to redirect the user to a URL other than the front page of your LIFF app.
             liff.login();
+            liff.getProfile().then(function(profile) {
+                document.getElementById("container-profile").classList.remove('hidden');
+                document.querySelector('.displayNameField').textContent = profile.displayName;
+
+                // took iamge from user line data
+                const img = document.querySelector('#profileImage');
+                img.src = profile.pictureUrl;
+                img.alt = 'Profile Picture';
+
+                document.querySelector('.statusMessageField').textContent = profile.statusMessage;
+            }).catch(function(error) {
+                window.alert('Error getting profile: ' + error);
+            });
         }
     });
 }

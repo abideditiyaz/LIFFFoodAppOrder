@@ -4,13 +4,14 @@ header {
 }
 
 .top-banner{
-    background-color: #00b900;
+    background-color: white;
     padding: 1rem;
     text-align: left;
-    color: white;
+    color: #33bf33;
     margin-bottom: 1rem;
     position: sticky;
     top: 0;
+    box-shadow: 2px 2px 7px #00000040;
 }
 
 nav{

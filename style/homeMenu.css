@@ -5,6 +5,16 @@
     justify-content: space-evenly;
 }
 
+.wrapper-second {
+	background-color: #07d207;
+    border-radius: 5px;
+    padding: .7rem 1rem;
+    color: #211f1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .main-wrapper {
 	display: flex;
 	flex-wrap: wrap;

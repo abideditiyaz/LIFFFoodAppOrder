@@ -49,7 +49,7 @@ const testingFood = async _ => {
 		addOrdinaryDrink.innerHTML = `
 			<img src="${i.strDrinkThumb}">
 			<span style="font-size: 1.3rem; font-weight: bold">${i.strDrink}</span>
-			<span style="font-size: 1.1rem; font-weight: lighter; color: #404040">${i.strAlcoholic}</span>
+			<span style="font-size: .75rem; font-weight: lighter; color: #404040">${i.strAlcoholic}</span>
 		`;
 		document.querySelector('#OrdinaryDrink').append(addOrdinaryDrink)
 	})
@@ -59,7 +59,7 @@ const testingFood = async _ => {
 	coffeTea.innerHTML = `
 		<img src="${cotea[0].strDrinkThumb}">
 		<span style="font-size: 1.3rem; font-weight: bold">${cotea[0].strDrink}</span>
-		<span style="font-size: 1.1rem; font-weight: lighter; color: #404040">${cotea[0].strAlcoholic}</span>
+		<span style="font-size: .75rem; font-weight: lighter; color: #404040">${cotea[0].strAlcoholic}</span>
 	`;
 	document.querySelector('#CoffeTea').append(coffeTea)
 
@@ -68,7 +68,7 @@ const testingFood = async _ => {
 	unknowns.innerHTML = `
 		<img src="${etc[0].strDrinkThumb}">
 		<span style="font-size: 1.3rem; font-weight: bold">${etc[0].strDrink}</span>
-		<span style="font-size: 1.1rem; font-weight: lighter; color: #404040">${etc[0].strAlcoholic}</span>
+		<span style="font-size: .75rem; font-weight: lighter; color: #404040">${etc[0].strAlcoholic}</span>
 	`;
 	document.querySelector('#Surprise').append(unknowns)
 }
