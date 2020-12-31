@@ -46,7 +46,7 @@
 	justify-content: space-around;
 }
 
-#getOrder {
+.getOrder {
 	border: none;
     padding: .75rem;
     width: 80%;

@@ -95,6 +95,21 @@ function displayLiffData() {
 * Register event handlers for the buttons displayed in the app
 */
 function registerButtonHandlers() {
+    document.getElementById('sendMessageButton').addEventListener('click', function() {
+        if (!liff.isInClient()) {
+            window.alert('This features only in app client')
+        } else {
+            liff.sendMessages([{
+                'type': 'text',
+                'text': `Berikut Pesanan Anda : ${document.querySelector('#name-items').innerHTML} sejumlah ${spanInner.innerHTML} gelas. Terima Kasih Atas Pesanannya, Mohon Ditunggu`
+            }]).then(function() {
+                window.alert('Pesanan Terkirim');
+            }).catch(function(error) {
+                window.alert('Error sending message: ' + error);
+            });
+        }
+    });
+
     document.getElementById('openWindowButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
             window.alert('This features only on in app Client')

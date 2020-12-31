@@ -116,7 +116,7 @@
 						<i style="cursor: pointer;" id="minus" class="fas fa-minus-square"></i>
 					</div>
 				</div>
-				<button id="getOrder">Pesan</button>
+				<button id="sendMessageButton" class="getOrder">Pesan</button>
 			</div>
 		</div>
 		<!-- Profile -->
@@ -187,6 +187,8 @@
 	<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 	<script type="module" src="./script/liffStarter.js"></script>
 	<script>
+
+		//Coba dulu kalau berhasil pindah kelompok
 		let spanInner = document.querySelector('#jumlah');
 
 		document.querySelector('#plus').addEventListener('click', _ => {
@@ -197,7 +199,6 @@
 			spanInner.innerHTML -= 1
 		})
 
-		//coba dulu kalau berhasil nanti pindah
 		document.querySelector('#getHomeButton').addEventListener('click', e => {
 			document.getElementById("homeMenu").style.display = 'block';
 			document.querySelector('#addSectionMenuHere').innerHTML = "";
