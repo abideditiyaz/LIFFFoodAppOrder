@@ -69,3 +69,28 @@
 .wrapper i {
     margin-right: 1.5rem;
 }
+
+/*button menu*/
+.wrapper-anyButton {
+    padding: .5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#openWindowButton {
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #33bf33;
+    color: white;
+}
+
+#liffLogoutButton {
+    padding: .5rem;
+    border: navajowhite;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}

@@ -1,6 +1,7 @@
 @import "navigation.css";
 @import "user-page.css";
 @import "homeMenu.css";
+@import "responsive.css";
 *{
 	padding: 0;
 	margin: 0;
