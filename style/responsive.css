@@ -65,7 +65,7 @@
 /*Laptop View*/
 @media screen and (min-width: 1024px) {
 	.wrapper-chartMenu {
-		width: 35%;
+		width: 35% !important;
 	}
 
 	#Shot {
