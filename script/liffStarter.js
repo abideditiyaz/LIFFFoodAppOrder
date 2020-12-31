@@ -124,7 +124,7 @@ function registerButtonHandlers() {
 
                 document.querySelector('.statusMessageField').textContent = profile.statusMessage;
             }).catch(function(error) {
-                window.alert('Error getting profile: ' + error);
+                console.error('Error getting profile: ' + error);
             });
 
     });
