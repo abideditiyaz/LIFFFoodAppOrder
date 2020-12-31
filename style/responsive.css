@@ -5,6 +5,21 @@
 	    width: 28%;
 	}
 
+	.wraper-profile{
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: space-between;
+	    height: 38vh;
+	}
+
+	.wraper-profile img {
+	    width: 30%;
+	    border-radius: 50%;
+	    margin-bottom: 1rem;
+	    border: 3px solid yellow;
+	}
+
 	.main-wrapper-khusus {
 		justify-content: flex-start;
 		padding-left: 3.5rem;
@@ -82,5 +97,7 @@
 
 /*Large Laptop indeed*/
 @media screen and (min-width: 1280px) {
-	
+	.wraper-profile img {
+	    width: 20%;
+	}
 }
