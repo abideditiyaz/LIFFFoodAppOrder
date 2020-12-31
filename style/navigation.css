@@ -15,7 +15,7 @@ header {
 }
 
 nav{
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
     background-color: white;
     width: 90%;
     transform: translateX(6%);
@@ -24,7 +24,7 @@ nav{
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 80vh;
+    top: 85vh;
 }
 
 .menu-boxes{

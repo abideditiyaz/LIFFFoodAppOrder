@@ -7,6 +7,8 @@ const testingFood = async _ => {
 	let ordinaryDrink = [];
 	let cotea = [];
 	let etc = [];
+
+	// separate data from url
 	data.forEach( i => {
 		if (i.strCategory === 'Cocktail') {
 			cokcTail.push(i)
@@ -71,4 +73,97 @@ const testingFood = async _ => {
 		<span style="font-size: .75rem; font-weight: lighter; color: #404040">${etc[0].strAlcoholic}</span>
 	`;
 	document.querySelector('#Surprise').append(unknowns)
+
+	// Chart Section
+	document.querySelectorAll('.wrapper-second').forEach( e => {
+			e.addEventListener('click', event => {
+				document.querySelector('#homeMenu').style.display = 'none';
+				document.querySelector('#chartMenu').classList.remove('hidden');
+
+				// make element when clicked
+				if (e.childNodes[1].innerText === "CockTail") {
+					cokcTail.forEach( i => {
+						const addCocktail = document.createElement('div');
+						addCocktail.setAttribute('class', 'wrapper-chartMenu')
+						addCocktail.innerHTML = `
+							<img src="${i.strDrinkThumb}">
+							<span style="font-size: 1.2rem; font-weight: bold">${i.strDrink}</span>
+						`;
+						document.querySelector('#addSectionMenuHere').append(addCocktail)
+					})
+					document.querySelectorAll('.wrapper-chartMenu').forEach( addName => {
+						addName.addEventListener('click', event => {
+							document.querySelector('#name-items').innerHTML = addName.childNodes[3].innerText;
+						})
+					});
+					// alert('Ini Cocktail')
+				}else if (e.childNodes[1].innerText === "Shot") {
+					// do something
+					shot.forEach( i => {
+						const addShot = document.createElement('div');
+						addShot.setAttribute('class', 'wrapper-chartMenu')
+						addShot.innerHTML = `
+							<img src="${i.strDrinkThumb}">
+							<span style="font-size: 1.3rem; font-weight: bold">${i.strDrink}</span>
+						`;
+						document.querySelector('#addSectionMenuHere').append(addShot)
+					})
+					document.querySelectorAll('.wrapper-chartMenu').forEach( addName => {
+						addName.addEventListener('click', event => {
+							document.querySelector('#name-items').innerHTML = addName.childNodes[3].innerText;
+						})
+					});
+					// alert('Ini Shot');
+				}else if(e.childNodes[1].innerText === "Ordinary Drink"){
+					ordinaryDrink.forEach( i => {
+						const addOrdinaryDrink = document.createElement('div');
+						addOrdinaryDrink.setAttribute('class', 'wrapper-chartMenu')
+						addOrdinaryDrink.innerHTML = `
+							<img src="${i.strDrinkThumb}">
+							<span style="font-size: 1.3rem; font-weight: bold">${i.strDrink}</span>
+						`;
+						document.querySelector('#addSectionMenuHere').append(addOrdinaryDrink)
+					})
+					document.querySelectorAll('.wrapper-chartMenu').forEach( addName => {
+						addName.addEventListener('click', event => {
+							document.querySelector('#name-items').innerHTML = addName.childNodes[3].innerText;
+						})
+					});
+					// alert('Ini OrdinaryDrink')
+				}else if(e.childNodes[1].innerText === "Coffe / Tea"){
+					const coffeTea = document.createElement('div');
+						coffeTea.setAttribute('class', 'wrapper-chartMenu')
+						coffeTea.innerHTML = `
+							<img src="${cotea[0].strDrinkThumb}">
+							<span style="font-size: 1.3rem; font-weight: bold">${cotea[0].strDrink}</span>
+						`;
+					document.querySelector('#addSectionMenuHere').append(coffeTea)
+					document.querySelectorAll('.wrapper-chartMenu').forEach( addName => {
+						addName.addEventListener('click', event => {
+							document.querySelector('#name-items').innerHTML = addName.childNodes[3].innerText;
+						})
+					});
+					// alert("Ini Coffe tea")
+				}else if (e.childNodes[1].innerText === 'Rarely Noticed'){
+					const unknowns = document.createElement('div');
+						unknowns.setAttribute('class', 'wrapper-chartMenu')
+						unknowns.innerHTML = `
+							<img src="${etc[0].strDrinkThumb}">
+							<span style="font-size: 1.3rem; font-weight: bold">${etc[0].strDrink}</span>
+						`;
+					document.querySelector('#addSectionMenuHere').append(unknowns)
+					document.querySelectorAll('.wrapper-chartMenu').forEach( addName => {
+						addName.addEventListener('click', event => {
+							document.querySelector('#name-items').innerHTML = addName.childNodes[3].innerText;
+						})
+					});
+					// alert('Ini saya tidak tau')
+				}else{
+					alert('Ini Keluar, Saya Pensi !!')
+				}
+				
+			})
+		})
 }
+
+export default testingFood;

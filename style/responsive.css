@@ -1,5 +1,9 @@
 /*Table View*/
 @media screen and (min-width: 768px) {
+	.chartMenu {
+		height: 80vh;
+	}
+
 	.wrapper-menu {
 	    height: 40vh;
 	    width: 28%;
@@ -60,6 +64,10 @@
 
 /*Laptop View*/
 @media screen and (min-width: 1024px) {
+	.wrapper-chartMenu {
+		width: 35%;
+	}
+
 	#Shot {
 		justify-content: flex-start;
 		padding-left: 3.5rem;

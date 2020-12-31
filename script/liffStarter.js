@@ -1,3 +1,5 @@
+import testingFood from "./trigger.js"
+
 window.onload = function() {
     const useNodeJS = false;   // if you are not using a node server, set this value to false
     const defaultLiffId = "1655319946-OeEe9ZXR";   // change the default LIFF value if you are not using a node server
@@ -64,6 +66,7 @@ function initializeLiff(myLiffId) {
  */
 function initializeApp() {
     displayLiffData();
+    testingFood()
     registerButtonHandlers();
 
     if (liff.isLoggedIn()) {

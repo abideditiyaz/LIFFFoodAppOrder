@@ -98,6 +98,27 @@
 				</div>
 			</div>
 		</div>
+		<!-- chart / order -->
+		<div id="chartMenu" class="hidden">
+			<div class="emboh">
+				<h3 id="headChart">Chart</h3>
+				<span>Click Thumbnail to select or puchase</span>
+			</div>
+			<div id="addSectionMenuHere" class="thumbMenu">
+				
+			</div>
+			<div class="counting">
+				<div class="sec1">
+					<h3 id="name-items"></h3>
+					<div class="counting-item">
+						<i id="plus" class="fas fa-plus-square"></i>
+						<span id="jumlah">1</span>
+						<i id="minus" class="fas fa-minus-square"></i>
+					</div>
+				</div>
+				<button id="getOrder">Pesan</button>
+			</div>
+		</div>
 		<!-- Profile -->
 		<div id="container-profile" class="hidden">
 			<h3 id="headProf">PROFILE</h3>
@@ -164,17 +185,29 @@
     </div>
     <!-- cdnLIFF -->
 	<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-	<script src="./script/liffStarter.js"></script>
-	<script src="./script/trigger.js"></script>
+	<script type="module" src="./script/liffStarter.js"></script>
 	<script>
-		//testing kalau berhasil nanti pindah
-		document.querySelector('#getHomeButton').addEventListener('click', _ => {
-			document.getElementById("homeMenu").style.display = 'block';
-			document.getElementById("container-profile").classList.add('hidden');
-			document.querySelector('#not-login').classList.add('hidden')
+		let spanInner = document.querySelector('#jumlah');
 
+		document.querySelector('#plus').addEventListener('click', _ => {
+			spanInner.innerHTML -=- 1
 		})
-		testingFood()
+
+		document.querySelector('#minus').addEventListener('click', _ => {
+			spanInner.innerHTML -= 1
+		})
+
+		//coba dulu kalau berhasil nanti pindah
+		document.querySelector('#getHomeButton').addEventListener('click', e => {
+			document.getElementById("homeMenu").style.display = 'block';
+			document.querySelector('#addSectionMenuHere').innerHTML = "";
+			document.querySelector('#name-items').innerHTML = "";
+			document.getElementById("container-profile").classList.add('hidden');
+			document.querySelector('#not-login').classList.add('hidden');
+			document.querySelector('#chartMenu').classList.add('hidden');
+			e.preventDefault()
+		})
+		
 	</script>
 </body>
 </html>
