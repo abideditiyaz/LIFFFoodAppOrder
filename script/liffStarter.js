@@ -1,5 +1,7 @@
+// give access to testingFood form trigger.js || modular 
 import testingFood from "./trigger.js"
 
+// TEMPLATE FUNCTION TO INITIALIZE LIFF
 window.onload = function() {
     const useNodeJS = false;   // if you are not using a node server, set this value to false
     const defaultLiffId = "1655319946-OeEe9ZXR";   // change the default LIFF value if you are not using a node server
@@ -65,7 +67,9 @@ function initializeLiff(myLiffId) {
  * Initialize the app by calling functions handling individual app components
  */
 function initializeApp() {
+    // displaying liff user data like username, photo, app version etc
     displayLiffData();
+    // call All content 
     testingFood()
     registerButtonHandlers();
 
@@ -95,6 +99,8 @@ function displayLiffData() {
 * Register event handlers for the buttons displayed in the app
 */
 function registerButtonHandlers() {
+
+    // This func for sending message by templat you change it by replace 'text' value by what ever you want
     document.getElementById('sendMessageButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
             window.alert('This features only in app client')
@@ -110,11 +116,13 @@ function registerButtonHandlers() {
         }
     });
 
+    // Open in external browser in case you want do something like via web
     document.getElementById('openWindowButton').addEventListener('click', function() {
         if (!liff.isInClient()) {
             window.alert('This features only on in app Client')
         }else {
             liff.openWindow({
+                // change the url value by your liff link 
                 url: 'https://liff.line.me/1655319946-OeEe9ZXR',
                 external: true
             });
@@ -122,12 +130,13 @@ function registerButtonHandlers() {
         
     });
 
+    // getting all line user data 
     document.getElementById('getProfileButton').addEventListener('click', function() {
         document.getElementById("homeMenu").style.display = 'none';
 
-        // Check client
+        // Check client login or not
         if (!liff.isLoggedIn()) {
-
+            // if not login this section gonna show and block all content
             document.querySelector('#not-login').classList.remove('hidden');
         }
 

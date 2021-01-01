@@ -1,4 +1,5 @@
 const testingFood = async _ => {
+	// consume data from API using async cuz i think this more safely
 	const all = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
 	const dataAll = await(all.json());
 	const data = dataAll.drinks;
@@ -8,7 +9,7 @@ const testingFood = async _ => {
 	let cotea = [];
 	let etc = [];
 
-	// separate data from url
+	// separate data from api url and push to new variable so it moore ez to call it
 	data.forEach( i => {
 		if (i.strCategory === 'Cocktail') {
 			cokcTail.push(i)
@@ -23,6 +24,8 @@ const testingFood = async _ => {
 		}
 	})
 	// console.log(dataAll.drinks);
+
+	// Adding content that i nedd by and API
 	cokcTail.forEach( i => {
 		const addCocktail = document.createElement('div');
 		addCocktail.setAttribute('class', 'wrapper-menu')
@@ -73,8 +76,9 @@ const testingFood = async _ => {
 		<span style="font-size: .75rem; font-weight: lighter; color: #404040">${etc[0].strAlcoholic}</span>
 	`;
 	document.querySelector('#Surprise').append(unknowns)
+	// Ending Adding content
 
-	// Chart Section
+	// Creating new section to adding chat and ordering items
 	document.querySelectorAll('.wrapper-second').forEach( e => {
 			e.addEventListener('click', event => {
 				document.querySelector('#homeMenu').style.display = 'none';
