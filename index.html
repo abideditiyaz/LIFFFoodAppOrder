@@ -190,33 +190,6 @@
     <!-- cdnLIFF -->
 	<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 	<script type="module" src="./script/liffStarter.js"></script>
-	<script>
-
-		//Coba dulu kalau berhasil pindah kelompok
-		document.querySelector('#getHistoryButton').addEventListener('click', _ => {
-			window.alert('Saya lupa mau naruh apa disini \n Tapi untuk yang versi online akan saya usahakan berguna')
-		})
-
-		let spanInner = document.querySelector('#jumlah');
-
-		document.querySelector('#plus').addEventListener('click', _ => {
-			spanInner.innerHTML -=- 1
-		})
-
-		document.querySelector('#minus').addEventListener('click', _ => {
-			spanInner.innerHTML -= 1
-		})
-
-		document.querySelector('#getHomeButton').addEventListener('click', e => {
-			document.getElementById("homeMenu").style.display = 'block';
-			document.querySelector('#addSectionMenuHere').innerHTML = "";
-			document.querySelector('#name-items').innerHTML = "";
-			document.getElementById("container-profile").classList.add('hidden');
-			document.querySelector('#not-login').classList.add('hidden');
-			document.querySelector('#chartMenu').classList.add('hidden');
-			e.preventDefault()
-		})
-		
-	</script>
+	
 </body>
 </html>
