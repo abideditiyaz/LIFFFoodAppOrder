@@ -1,3 +1,4 @@
+import "https://static.line-scdn.net/liff/edge/2/sdk.js";
 // give access to testingFood form trigger.js || modular 
 import testingFood from "./trigger.js"
 
