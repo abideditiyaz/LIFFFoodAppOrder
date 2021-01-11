@@ -29,31 +29,7 @@ window.onload = function() {
         myLiffId = defaultLiffId;
         initializeLiffOrDie(myLiffId);
     }
-
-    // buttonClickHandler
-    document.querySelector('#getHistoryButton').addEventListener('click', _ => {
-        window.alert('Nothing here !!!\nComeback when my head full of idea')
-    })
-
-    let spanInner = document.querySelector('#jumlah');
-
-    document.querySelector('#plus').addEventListener('click', _ => {
-        spanInner.innerHTML -=- 1
-    })
-
-    document.querySelector('#minus').addEventListener('click', _ => {
-        spanInner.innerHTML -= 1
-    })
-
-    document.querySelector('#getHomeButton').addEventListener('click', e => {
-        document.getElementById("homeMenu").style.display = 'block';
-        document.querySelector('#addSectionMenuHere').innerHTML = "";
-        document.querySelector('#name-items').innerHTML = "";
-        document.getElementById("container-profile").classList.add('hidden');
-        document.querySelector('#not-login').classList.add('hidden');
-        document.querySelector('#chartMenu').classList.add('hidden');
-        e.preventDefault()
-    })
+    
 };
 
 /**
