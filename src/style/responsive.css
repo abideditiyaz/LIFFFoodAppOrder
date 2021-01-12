@@ -1,0 +1,107 @@
+/*Table View*/
+@media screen and (min-width: 768px) {
+	.chartMenu {
+		height: 80vh;
+	}
+
+	.wrapper-menu {
+	    height: 40vh;
+	    width: 28%;
+	}
+
+	.wraper-profile{
+	    flex-wrap: nowrap;
+	}
+
+	.wraper-profile img {
+	    width: 30%;
+	    border-radius: 50%;
+	    margin-bottom: 1rem;
+	    border: 3px solid yellow;
+	}
+
+	.main-wrapper-khusus {
+		justify-content: flex-start;
+		padding-left: 3.5rem;
+	}
+
+	header {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	nav {
+		box-shadow: none;
+		width: 50%;
+		padding: .5rem 1rem;
+		right: 5%;
+		top: 20%;
+		font-size: 1.3rem;
+		color: #33bf33;
+		font-weight: 600;
+	}
+
+	.menu-boxes:nth-child(2){
+	    border: none;
+	}
+
+	.top-banner {
+		width: 100%;
+	}
+
+	#getHomeButton i {
+		display: none;
+	}
+
+	#getHistoryButton i {
+		display: none;
+	}
+
+	#getProfileButton i {
+		display: none;
+	}
+}
+
+/*Laptop View*/
+@media screen and (min-width: 1024px) {
+	.wrapper-chartMenu {
+		width: 35% !important;
+	}
+
+	#Shot {
+		justify-content: flex-start;
+		padding-left: 3.5rem;
+	}
+
+	.wrapper-menu {
+		height: 25vh;
+		width: 15%;
+	}
+
+	#Shot .wrapper-menu:nth-child(2) {
+		margin-left: 3rem
+	}
+
+	.wrapper {
+		height: 18%;
+		justify-content: space-between;
+		width: 50%;
+	}
+
+	.wrapper-anyButton {
+		padding: .5rem;
+	    padding-bottom: 1.5rem;
+	    display: flex;
+	    flex-direction: column;
+	    height: 16%;
+	    width: 20%;
+	    justify-content: space-between;
+	}
+}
+
+/*Large Laptop indeed*/
+@media screen and (min-width: 1280px) {
+	.wraper-profile img {
+	    width: 20%;
+	}
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const cockTail = () => {
+const CockTail = () => {
   return (
     // <!-- Cocktail
     <div className="sorted">
@@ -13,7 +13,7 @@ const cockTail = () => {
   );
 };
 
-const shot = () => {
+const Shot = () => {
   return (
     // Shot
     <div className="sorted">
@@ -26,7 +26,7 @@ const shot = () => {
   );
 };
 
-const ordinaryDrink = () => {
+const OrdinaryDrink = () => {
   return (
     //Ordinary Drink
     <div className="sorted">
@@ -39,7 +39,7 @@ const ordinaryDrink = () => {
   );
 };
 
-const coffeTea = () => {
+const CoffeTea = () => {
   return (
     // <!-- Coffe Tea
     <div className="sorted">
@@ -52,7 +52,7 @@ const coffeTea = () => {
   );
 };
 
-const surprise = () => {
+const Surprise = () => {
   return (
     // Surprise
     <div className="sorted">
@@ -65,4 +65,4 @@ const surprise = () => {
   );
 };
 
-export { cockTail, shot, ordinaryDrink, coffeTea, surprise };
+export { CockTail, Shot, OrdinaryDrink, CoffeTea, Surprise };

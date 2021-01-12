@@ -1,0 +1,99 @@
+/*profile*/
+.data-info,
+#liffData {
+    padding: 1.2rem;
+}
+
+#liffData {
+    height: 100vh;
+}
+
+.wraper-profile{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 38vh;
+}
+
+.wraper-profile img {
+    width: 50%;
+    border-radius: 50%;
+    border: 3px solid yellow;
+}
+
+.data-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+.data-user span:nth-child(1) {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+#headProf {
+    font-weight: bold;
+    color: #70d670;
+    margin: .65rem;
+    border: 1px solid #00b900;
+    padding: .65rem;
+    text-align: center;
+    width: 40%;
+    border-radius: 7px;
+}
+
+/*LIFF User Data*/
+.wrapper-liff-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 80vh;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 25%;
+    border-bottom: 2px dashed;
+    padding: .75rem 1rem;
+}
+
+.wrapper i {
+    margin-right: 1.5rem;
+}
+
+/*button menu*/
+.wrapper-anyButton {
+    padding: .5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#openWindowButton {
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #33bf33;
+    color: white;
+    cursor: pointer;
+}
+
+#liffLogoutButton {
+    padding: .5rem;
+    border: navajowhite;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}

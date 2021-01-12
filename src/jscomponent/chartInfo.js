@@ -1,6 +1,6 @@
 import React from 'react';
 
-const chartInfo = _ =>{
+const ChartInfo = _ =>{
     return(
         <div id="chartMenu" className="hidden">
         <div className="emboh">
@@ -14,9 +14,9 @@ const chartInfo = _ =>{
             <div className="sec1">
             <h3 id="name-items"></h3>
             <div className="counting-item">
-                <i style="cursor: pointer;" id="plus" className="fas fa-plus-square"></i>
+                <i style={{cursor: "pointer"}} id="plus" className="fas fa-plus-square"></i>
                 <span id="jumlah">1</span>
-                <i style="cursor: pointer;" id="minus" className="fas fa-minus-square"></i>
+                <i style={{cursor: "pointer"}} id="minus" className="fas fa-minus-square"></i>
             </div>
             </div>
             <button id="sendMessageButton" className="getOrder">Pesan</button>
@@ -26,4 +26,4 @@ const chartInfo = _ =>{
     
 }
 
-export default chartInfo;
+export default ChartInfo;

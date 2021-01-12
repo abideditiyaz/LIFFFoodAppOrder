@@ -1,6 +1,6 @@
 import React from 'react';
 
-const profileUser = () => {
+const ProfileUser = () => {
     return(
         <div className="hidden">
             {/* display line user data */}
@@ -46,4 +46,4 @@ const profileUser = () => {
     );
 };
 
-export default profileUser;
+export default ProfileUser;

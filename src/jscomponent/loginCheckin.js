@@ -3,7 +3,7 @@ import React from "react";
 const LoginCheck = (_) => {
   return (
     // Login Checkin
-    <div id="not-login">
+    <div id="not-login" className="hidden">
       <div className="alertLogin">
         <h3>Eeiitss login dulu kak...</h3>
         <p>Silahkan login dengan akun line anda untuk mengakses profil</p>

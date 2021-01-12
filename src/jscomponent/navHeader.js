@@ -1,6 +1,6 @@
 import React from "react";
 
-const headerNav = () => {
+const HeaderNav = () => {
   return (
     // Menu Navigation
     <header>
@@ -10,19 +10,19 @@ const headerNav = () => {
       <nav>
         <div id="getHomeButton" className="home menu-boxes">
           <i className="fas fa-utensils fa-lg"></i>
-          <caption>Home</caption>
+          <span>Home</span>
         </div>
         <div id="getHistoryButton" className="history menu-boxes">
           <i className="fas fa-cloud-meatball fa-lg"></i>
-          <caption>Recent</caption>
+          <span>Recent</span>
         </div>
         <div id="getProfileButton" className="account menu-boxes">
           <i className="fas fa-user-circle fa-lg"></i>
-          <caption>Account</caption>
+          <span>Account</span>
         </div>
       </nav>
     </header>
   );
 };
 
-export default headerNav;
+export default HeaderNav;

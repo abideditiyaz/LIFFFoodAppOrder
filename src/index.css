@@ -1,4 +1,8 @@
-@import url("https://kit.fontawesome.com/27e59cf5d8.js");
+@import "./style/navigation.css";
+@import "./style/user-page.css";
+@import "./style/homeMenu.css";
+@import "./style/responsive.css";
+@import "./style/chartMenu.css";
 
 * {
   padding: 0;
