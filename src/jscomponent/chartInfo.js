@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChartInfo = _ =>{
     return(
-        <div id="chartMenu" className="hidden">
+        <div id="chartMenu">
         <div className="emboh">
             <h3 id="headChart">Chart</h3>
             <span>Click Thumbnail to select or puchase</span>

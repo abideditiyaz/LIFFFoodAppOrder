@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProfileUser = () => {
     return(
-        <div className="hidden">
+        <div style={{padding: "1rem", paddingBottom: "4rem"}}>
             {/* display line user data */}
             <h3 id="headProf">PROFILE</h3>
             <div className="imgWrapper">
